@@ -3,8 +3,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer {
-	div {
-		@apply text-neutral-very-dark font-bold font-LeagueSpartan text-6xl;
-	}
-}
