@@ -16,12 +16,12 @@ export const JobListingsApp = () => {
 			<Header />
 			<FiltersCard filters={filters} setFilters={setFilters} />
 			{filteredJobs.map((jobData) => (
-				<JobCard job={jobData} key={jobData.id}>
+				<JobCard job={jobData} key={jobData.id} filters={filters} setFilters={setFilters}>
 					<JobLogo />
 					<JobCompany />
 					<JobPosition />
 					<JobContractAndLocation />
-					<JobRequirements setFilters={setFilters} />
+					<JobRequirements/>
 				</JobCard>
 			))}
 		</div>

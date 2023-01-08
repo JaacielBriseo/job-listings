@@ -1,7 +1,6 @@
-import { useJobRequirements } from "../hooks";
-
-export const JobRequirements = ({ setFilters }: { setFilters: React.Dispatch<React.SetStateAction<string[]>> }) => {
-const {requirements, onClick} = useJobRequirements(setFilters)
+import { useJobRequirements } from '../hooks';
+export const JobRequirements = () => {
+	const { requirements, onClick } = useJobRequirements();
 	return (
 		<div className='jobRequirementsLayout'>
 			<div className='divider'></div>

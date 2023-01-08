@@ -15,7 +15,6 @@ export const FiltersCard = ({ filters, setFilters }: Props) => {
 				))}
 			</div>
 			<div className='w-1/4 flex items-center justify-center'>
-				{/* <h5 className='font-bold text-base text-neutral-dark'>Clear</h5> */}
 				<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' onClick={() => setFilters([])}>
 					<path
 						fill='hsl(180, 8%, 52%)'
