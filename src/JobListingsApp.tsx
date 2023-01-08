@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import data from '../data.json';
-import { Jobs } from './interfaces';
+import { useJobList } from './hooks';
 import {
 	FiltersCard,
 	Header,
@@ -12,17 +10,11 @@ import {
 	JobRequirements,
 } from './components';
 export const JobListingsApp = () => {
-	const [jobsData, setJobsData] = useState<Jobs[]>(data);
-	const [filters, setFilters] = useState<string[]>([]);
-	const filteredJobs = jobsData.filter((job) => {
-		return filters.every((filter) => {
-			return job.role.includes(filter) || job.languages.includes(filter) || job.level.includes(filter);
-		});
-	});
+	const { filteredJobs, filters, setFilters } = useJobList();
 	return (
 		<div className='font-LeagueSpartan bg-neutral-light-bg'>
 			<Header />
-			<FiltersCard filters={filters} />
+			<FiltersCard filters={filters} setFilters={setFilters} />
 			{filteredJobs.map((jobData) => (
 				<JobCard job={jobData} key={jobData.id}>
 					<JobLogo />
