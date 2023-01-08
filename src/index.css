@@ -8,6 +8,39 @@
 		@apply bg-primary bg-HeaderMobile bg-no-repeat bg-cover w-full h-40;
 	}
 	section {
-		@apply w-[327px] h-72 mx-auto p-7 bg-white m-16 rounded-lg border-l-8 border-l-primary relative;
+		@apply w-[327px] h-72 mx-auto p-7 bg-white m-12 rounded-lg border-l-8 border-l-primary relative;
 	}
+	img {
+		@apply absolute -top-5 w-14 h-14;
+	}
+	span {
+		@apply font-bold text-primary capitalize;
+	}
+	p {
+		@apply text-center;
+	}
+	h1 {
+		@apply mt-5 font-bold text-base capitalize;
+	}
+	small {
+		@apply text-[#7C8F8F] font-medium text-base;
+	}
+	button {
+		@apply m-1 p-1 text-primary bg-neutral-light-fg rounded-md hover:text-white hover:bg-primary;
+	}
+	li {
+		@apply flex justify-between flex-wrap;
+	}
+}
+.jobCompanyLayout {
+	@apply w-[231px] mt-5 flex justify-between;
+}
+.jobRequirementsLayout {
+	@apply w-[290px] h-20 mt-4;
+}
+.jobContractAndLocationLayout {
+	@apply flex w-52 justify-between mt-3;
+}
+.divider {
+	@apply w-10/12 border-t-2 border-neutral-dark;
 }
