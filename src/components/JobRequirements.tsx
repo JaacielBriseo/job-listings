@@ -10,16 +10,16 @@ export const JobRequirements = ({ setFilters }: { setFilters: React.Dispatch<Rea
 			<div className='divider'></div>
 			<div className='w-[270px] h-24 mt-3'>
 				<li>
-					<button name={role} onClick={onClick}>
+					<button type='button' name={role} onClick={onClick}>
 						{role}
 					</button>
-					<button name={level} onClick={onClick}>
+					<button type='button' name={level} onClick={onClick}>
 						{level}
 					</button>
 					{tools.map((tool) => {
 						if (tool.length === 0) return;
 						return (
-							<button key={tool} name={tool} onClick={onClick}>
+							<button type='button' key={tool} name={tool} onClick={onClick}>
 								{tool}
 							</button>
 						);
@@ -27,7 +27,7 @@ export const JobRequirements = ({ setFilters }: { setFilters: React.Dispatch<Rea
 					{languages.map((language) => {
 						if (language.length === 0) return;
 						return (
-							<button key={language} name={language} onClick={onClick}>
+							<button type='button' key={language} name={language} onClick={onClick}>
 								{language}
 							</button>
 						);
