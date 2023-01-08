@@ -3,3 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	header {
+		@apply bg-primary bg-HeaderMobile bg-no-repeat bg-cover w-full h-40;
+	}
+	section {
+		@apply w-[327px] h-72 mx-auto p-7 bg-white m-16 rounded-lg border-l-8 border-l-primary;
+	}
+}

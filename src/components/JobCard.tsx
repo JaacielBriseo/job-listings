@@ -9,6 +9,6 @@ export interface JobCardProps {
 	children?: ReactElement | ReactElement[];
 }
 export const JobCard = ({ children, job }: JobCardProps) => {
-    console.log(job);
-	return <div>JobCard</div>;
+	console.log(job);
+	return <section>JobCard</section>;
 };

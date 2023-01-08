@@ -13,6 +13,10 @@ module.exports = {
 			fontFamily: {
 				LeagueSpartan: ['League Spartan', 'sans-serif'],
 			},
+			backgroundImage: {
+				HeaderMobile: 'url(images/bg-header-mobile.svg)',
+				HeaderDesktop: 'url(images/bg-header-desktop.svg)',
+			},
 		},
 	},
 	plugins: [],
