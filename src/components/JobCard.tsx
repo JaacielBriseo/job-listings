@@ -1,14 +1,17 @@
 import { createContext, ReactElement } from 'react';
-import { Jobs } from '../interfaces/interfaces';
+import { Jobs } from '../interfaces';
 
-export const JobsContext = createContext({});
+export const JobsContext = createContext({} as Jobs);
 const { Provider } = JobsContext;
 
 export interface JobCardProps {
 	job: Jobs;
-	children?: ReactElement | ReactElement[];
+	children: ReactElement | ReactElement[];
 }
 export const JobCard = ({ children, job }: JobCardProps) => {
-	console.log(job);
-	return <section>JobCard</section>;
+	return (
+		<Provider value={job}>
+			<section>{children}</section>;
+		</Provider>
+	);
 };
