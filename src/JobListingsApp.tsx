@@ -12,7 +12,7 @@ import {
 export const JobListingsApp = () => {
 	const { filteredJobs, filters, setFilters } = useJobList();
 	return (
-		<div className='font-LeagueSpartan bg-neutral-light-bg'>
+		<>
 			<Header />
 			<FiltersCard filters={filters} setFilters={setFilters} />
 			{filteredJobs.map((jobData) => (
@@ -21,9 +21,9 @@ export const JobListingsApp = () => {
 					<JobCompany />
 					<JobPosition />
 					<JobContractAndLocation />
-					<JobRequirements/>
+					<JobRequirements />
 				</JobCard>
 			))}
-		</div>
+		</>
 	);
 };
