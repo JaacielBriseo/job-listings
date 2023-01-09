@@ -3,6 +3,10 @@ interface Props {
 	setFilters: React.Dispatch<React.SetStateAction<string[]>>;
 }
 export const FiltersCard = ({ filters, setFilters }: Props) => {
+	const removeFilter = (filter: string) => {
+		const newFilters = filters.filter((filt) => filt !== filter);
+		setFilters(newFilters);
+	};
 	return (
 		<div
 			className={`${
@@ -11,7 +15,9 @@ export const FiltersCard = ({ filters, setFilters }: Props) => {
 		>
 			<div className='w-3/4'>
 				{filters.map((filter) => (
-					<button key={filter}>{filter}</button>
+					<button onClick={() => removeFilter(filter)} key={filter}>
+						{filter}
+					</button>
 				))}
 			</div>
 			<div className='w-1/4 flex items-center justify-center'>
